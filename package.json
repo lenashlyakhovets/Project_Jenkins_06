@@ -1,7 +1,6 @@
 {
   "name": "project_jenkins_06",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +8,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.10.0"
-  }
+    "cypress": "^12.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenashlyakhovets/Project_Jenkins_06.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lenashlyakhovets/Project_Jenkins_06/issues"
+  },
+  "homepage": "https://github.com/lenashlyakhovets/Project_Jenkins_06#readme",
+  "description": ""
 }
