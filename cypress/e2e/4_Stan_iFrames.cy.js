@@ -23,7 +23,7 @@ describe('iFrame testing', () => {
           .its('0.contentDocument')
           .its('body')        
           .find('#rc-anchor-alert')          
-          .click({force: true});
+          .click({ force: true });
         cy.get('iframe[title="recaptcha challenge expires in two minutes"]')
           .should('be.visible');
     });
