@@ -1,0 +1,17 @@
+{   
+    "endPointUrl" : [
+        "/all/newJob", 
+        "/asynchPeople/", 
+        "/builds",
+        "/manage/", 
+        "/my-views/view/all/"
+    ],
+
+    "sidePanelItems" : [
+        "New Item", 
+        "People", 
+        "Build History", 
+        "Manage Jenkins", 
+        "My Views"
+    ]
+}
