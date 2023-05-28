@@ -23,3 +23,28 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('getTable', () => {
+    let keysArr;
+    let table = [];
+    cy.get('div.rt-table').within(() => {
+        cy.get('div.rt-th').then(($els) => {
+            keysArr = Cypress.$.makeArray($els).map(($el) => $el.innerText);
+        });
+        cy.get('div.rt-tr-group').each((_, row) => {
+            cy.get('div.rt-tr-group')
+              .eq(row)
+              .find('div.rt-td')
+              .then(($els) => {
+                let dataArr = Cypress.$.makeArray($els).map(($el) => $el.innerText);
+                let tempObj = dataArr.reduce((obj, el, idx) => {
+                    return { ...obj, [keysArr[idx]]: el };
+                }, {});
+                if (tempObj['First Name'].trim() != '') {
+                    table.push(tempObj);
+                }
+              });
+        });
+    });
+    return cy.wrap(table);
+});
