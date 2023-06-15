@@ -18,5 +18,8 @@
     "url": "https://github.com/lenashlyakhovets/Project_Jenkins_06/issues"
   },
   "homepage": "https://github.com/lenashlyakhovets/Project_Jenkins_06#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1"
+  }
 }
